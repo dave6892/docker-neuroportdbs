@@ -11,11 +11,12 @@ services:
       - serf_mysql:/var/lib/mysql
   app:
     build: .
+    image: dave6892/neuroportdbs:latest
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - ~/Documents/Data/STN_DBS_Data/STN_Patient21:/tmp/data
-      - ./ImportNS5FeaturesGUI.py:/app/ImportNS5FeaturesGUI.py
-      - ./FeaturesGUI.py:/app/FeaturesGUI.py
+      - ./data:/tmp/data
+      - ./import_ns5.py:/app/import_ns5.py
+      - ./features_gui.py:/app/features_gui.py
     ports: 
       - 6666:80
     depends_on:
