@@ -3,7 +3,7 @@
 This is a Docker container for [NeuroportDBS](https://github.com/SachsLab/NeuroportDBS). NeuroportDBS is a collection of software [SachsLab](https://github.com/SachsLab) use for deep brain stimulation (DBS) surgery intraoperative mapping with microelectrode recording (MER) using the Blackrock Neuroport. 
 
 
-** Note **
+### **Note**
 * The NeuroportDBS repository is currently a private repository.
 * The files in this repository does not build the docker image for NeuroportDBS, the building of the docker image is currently in another private repository.
 * The files in this repository pull the `neuroportdbs` docker image from my DockerHub repository, see [here](https://hub.docker.com/repository/docker/dave6892/neuroportdbs). 
