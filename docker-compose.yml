@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: serf
+      MYSQL_ROOT_PASSWORD: mysql
+    ports:
+      - 23306:3306
+    volumes:
+      - serf_mysql:/var/lib/mysql
+  app:
+    build: .
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/Documents/Data/STN_DBS_Data/STN_Patient21:/tmp/data
+      - ./ImportNS5FeaturesGUI.py:/app/ImportNS5FeaturesGUI.py
+      - ./FeaturesGUI.py:/app/FeaturesGUI.py
+    ports: 
+      - 6666:80
+    depends_on:
+      - db
+    user: qtuser
+    environment: 
+      - XDG_RUNTIME_DIR=/tmp/runtime-qtuser
+    command: /bin/bash
+
+volumes:
+  serf_mysql:
