@@ -1,5 +1,9 @@
 # docker-neuroportdbs
 
+## How to Run
+
+To run in MacOS, see the next section.
+
 A simplistic demo for starting up the docker-serf container.
 
     $ git clone https://github.com/dave6892/docker-neuroportdbs.git
@@ -12,3 +16,9 @@ A simplistic demo for starting up the docker-serf container.
 For the first time running this application, make sure to run
 
     $ serf-makemigrations; serf-migrate
+
+## To run in MacOS
+1. Install [XQuartz](https://www.xquartz.org). Restart OS.
+2. In XQuartz: Check the option: XQuartz -> Preferences -> Security -> "Allow connections from network clients"
+3. Run the code above.
+
