@@ -6,7 +6,7 @@ This is a Docker container for [NeuroportDBS](https://github.com/SachsLab/Neurop
 ** Note **
 * The NeuroportDBS repository is currently a private repository.
 * The files in this repository does not build the docker image for NeuroportDBS, the building of the docker image is currently in another private repository.
-* The files in this repository pull the `neuroportdbs` docker image from DockerHub. 
+* The files in this repository pull the `neuroportdbs` docker image from my DockerHub repository, see [here](https://hub.docker.com/repository/docker/dave6892/neuroportdbs). 
 
 ## How to Run
 
