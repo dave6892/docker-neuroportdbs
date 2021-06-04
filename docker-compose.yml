@@ -14,9 +14,10 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/Developer/Data/ClinicalDBS/raw:/tmp/data
-      - ./import_ns5.py:/app/import_ns5.py
-      - ./features_gui.py:/app/features_gui.py
-      - ./neuroport_dbs:/app/neuroport_dbs
+        #- ./import_ns5.py:/app/import_ns5.py
+        #- ./features_gui.py:/app/features_gui.py
+        #- ./neuroport_dbs:/app/neuroport_dbs
+      - .:/app
     ports: 
       - 6666:80
     depends_on:
